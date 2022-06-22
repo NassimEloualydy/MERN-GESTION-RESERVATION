@@ -1,0 +1,13 @@
+const express=require('express');
+const Router=express.Router();
+const {Hello,add,getall,getImage,deletePersone,updatePerson,search,latestUpdate,latestCreate}=require('../controller/personeController');
+Router.get('/hellow',Hello);
+Router.post('/add',add);
+Router.get('/getall',getall);
+Router.get('/getimage/:id',getImage);
+Router.post('/delete/:id',deletePersone);
+Router.put('/update/:id',updatePerson);
+Router.post('/search',search);
+Router.get('/latestUpdate',latestUpdate);
+Router.get('/latestcreate',latestCreate);
+module.exports=Router;

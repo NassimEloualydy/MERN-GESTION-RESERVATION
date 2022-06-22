@@ -1,0 +1,12 @@
+const express=require('express');
+const Router=express.Router();
+const {hellow,addDegat,getall,deleteDegat,updateDegate,search,lastCreate,lastUpdate}=require('../controller/degatController');
+Router.get('/hellow',hellow);
+Router.post('/add',addDegat);
+Router.get('/getall',getall);
+Router.delete('/deleteDegat/:id',deleteDegat);
+Router.post('/updateDegate/:id',updateDegate);
+Router.post('/search',search);
+Router.get('/lastCreate',lastCreate);
+Router.get('/lastUpdate',lastUpdate);
+module.exports=Router;

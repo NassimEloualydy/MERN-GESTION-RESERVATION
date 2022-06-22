@@ -1,0 +1,12 @@
+const express=require('express');
+const Router=express.Router();
+const {hellow,connexion,inscription,Quitter,showPhotoAdmin,getAdmin,updateAdmin}=require('../controller/adminController');
+// const {AdminCnx}=require('../middleware/admin');
+Router.get('/',hellow);
+Router.post('/connxion',connexion);
+Router.post('/inscription',inscription);
+Router.get('/quitter',Quitter);
+Router.get('/getCompt/:id',showPhotoAdmin);
+Router.post('/getAdmin',getAdmin);
+Router.post('/updateAdmin/:id',updateAdmin);
+module.exports=Router;
